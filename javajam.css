@@ -1,0 +1,175 @@
+body {
+	background-color: #eee2ae;
+	font-family:Verdana, Arial, sans-serif;
+	min-width: 800px;	
+}
+
+#page-wrapper { 
+	background-color: #e2d1b2; 
+    color: #000066;
+    width: 80%;
+	margin: auto;
+    min-width: 800px;
+	max-width: 1100px;
+	box-shadow: 10px 10px 5px #542a21;
+	margin-bottom: 30px;
+}
+
+header{
+    color: #00005D; 
+    font-size: 150%; 
+    padding: 10px 10px 10px 155px;
+	background: url("header.PNG") no-repeat center;
+	background-size: 600px 90px;
+	background-color: #d1b38e;
+	height: 90px;
+}
+
+#left-column{
+	float: left;
+	min-width: 100px;
+
+}
+
+
+#right-column{
+	margin-left: 150px;
+    color: #865c3e;
+	background-color: #f5f5dd;
+
+}
+
+nav ul { list-style-type: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: #855b47;
+}
+
+nav a:visited{
+	color: #ab876a;
+}
+
+.content{
+	padding: 10px 30px 0px 20px;
+	color: #2d0202; 
+}
+
+footer{
+	background-color: #d1b38e;
+	text-align: center;
+	font-size: 12px;
+	padding: 20px 0px 20px 0px;
+	color: black;
+	
+}
+
+footer a {
+	color: #2d0202;
+}
+
+.content-header h2{
+	color: #2d0202;
+	font-size: 24px;
+	
+}
+
+#road-image{
+	width: 300px;
+	margin: 5px 50px;
+	
+}
+
+.content-body{
+	margin: 0px 0px 0px 380px;
+	/* min-width: 250px; */
+}
+
+.address-container{
+	margin: 0px 0px 0px 400px;
+}
+
+.content-body ul {
+	list-style-image: url(cup-resize.png);
+	line-height: 1.6;
+}
+
+.menu-table{
+	margin-left: 90px;
+	margin-right: 90px;
+}
+
+td {
+	padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+	background-color: #d1b38e;
+}
+
+.label{
+	max-width: 120px;
+	text-align: center;
+	padding: 20px;
+	font-weight: bold;
+}
+
+.music-table{
+	min-width: 450px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+.center-table{
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.music-table tr:nth-of-type(odd) td {
+	background-color: #e2d1b2;
+	padding: 2px;
+}
+
+.music-table tr:nth-of-type(even) td {
+	padding-top: 15px;
+}
+
+.music-text{
+	margin-left: 50px;
+	
+}
+
+
+
+.album-cover{
+	width: 80px;
+	padding: 0px 50px 0px 30px;
+}
+
+.audio-player{
+	width: 250px;
+}
+
+
+label { 
+	float: left; 
+	clear: left; 
+	display: block; 
+	width: 120px;
+	text-align: right; 
+	padding-right: 30px; 
+	padding-left: 20px;
+
+}
+
+input, textarea { 
+	display: block;
+}
+
+textarea{
+	width: 300px;
+	height: 80px;
+}
+
