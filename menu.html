@@ -2,72 +2,108 @@
 <html lang="en">
 
 <head>
-	<title>JavaJam Coffee House</title>
-	<meta charset=“utf-8”>
-	<link rel="stylesheet" href="javajam.css">
+    <title>JavaJam Coffee House</title>
+    <meta charset=“utf-8”>
+    <link rel="stylesheet" href="javajam.css">
 </head>
 
 <body>
-	<div id="page-wrapper">
+    <div id="page-wrapper">
 
-		<header>
-		</header>
+        <header>
+        </header>
 
-		<div id="left-column">
-			<nav>
-				<ul>
-					<b>
+        <div id="left-column">
+            <nav>
+                <ul>
+                    <b>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="menu.html">Menu</a></li>
 						<li><a href="music.html">Music</a></li>
 						<li><a href="jobs.html">Jobs</a></li>
 					</b>
-				</ul>
-			</nav>
+                </ul>
+            </nav>
 
-		</div>
+        </div>
 
-		<div id="right-column">
-			<div class="content">
-				<div class="content-header">
-					<h2>Coffee at JavaJam</h2>
-				</div>
-				<div class="menu-table">
-					<table border="0">
-						<tr>
-							<td class="label">Just Java</td>
-							<td>Regular house blend, decaffeinated coffee, or flavor of the day.<br>
-								<strong>Endless Cup $2.00</strong></td>
-						</tr>	
-						<tr>
-							<td class="label">Cafe au Lait</td>
-							<td>House blended coffee infused into a smooth, steamed milk.
-								<br><strong>Single $2.00 Double $3.00</strong></td>
-						</tr>
-						<tr>
-							<td class="label">Iced Cappuccino</td>
-							<td>Sweetened espresso blended with icy-cold milk and served in a
-								chilled glass. <br>
-								<strong>Single $4.75 Double $5.75</strong></td>
-						</tr>
+        <div id="right-column">
+            <div class="content">
+                <div class="content-header">
+                    <h2>Coffee at JavaJam</h2>
+                </div>
+                <div class="menu-table">
+                    <table border="0" class="menu_tbl">
+                        <tr>
+                            <th>Coffee Name</th>
+                            <th>Description</th>
+                            <th>Qty</th>
+                            <th>$</th>
+                        </tr>
+                        <tr>
+                            <td class="label">Just Java</td>
+                            <td>Regular house blend, decaffeinated coffee, or flavor of the day.<br>
+                                <strong><label><input type="radio" name="j_java" id="j_java" value="2">Endless Cup $2.00</label>
+								</strong>
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="qty_java" name="qty_java">
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="price_java" name="price_java">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">Cafe au Lait</td>
+                            <td>House blended coffee infused into a smooth, steamed milk.<br>
+                                <strong><label><input type="radio" name="ca_lait" id="single_lait" value="2">Single $2.00</label>
+								<label><input type="radio" name="ca_lait" id="double_lait" value="3">Double $3.00
+								</strong>
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="qty_lait" name="qty_lait">
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="price_lait" name="price_lait">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">Iced Cappuccino</td>
+                            <td>Sweetened espresso blended with icy-cold milk and served in a chilled glass.<br>
+                                <strong><label><input type="radio" name="i_cap" id="single_cap" value="4.75">Single $4.75</label>
+								<label><input type="radio" name="i_cap" id="double_cap" value="5.75">Double $5.75
+								</strong>
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="qty_cap" name="qty_cap">
+                            </td>
+                            <td>
+                                <input type="text" class="qty_price" id="price_cap" name="price_cap">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="total_price_lbl"><strong>Total Price</strong></td>
+                            <td colspan="2">
+                                <input type="text" class="qty_price" id="total_price" name="total_price">
+                            </td>
+                        </tr>
+                    </table>
 
+                </div>
 
-					</table>
-				
-				</div>
-				
-				<br>
-				<br>
-				<br>
-			</div>
-		</div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
 
-		<footer>
-			<small><i>Copyright &copy; 2014 JavaJam Coffee House<br>
+        <footer>
+            <small><i>Copyright &copy; 2014 JavaJam Coffee House<br>
 					<a href="mailto:yuhan@liu.com">yuhan@liu.com</a>
 				</i></small>
-		</footer>
-	</div>
+        </footer>
+    </div>
 </body>
 
 </html>
