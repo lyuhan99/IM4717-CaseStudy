@@ -102,11 +102,11 @@ td {
 
 /* for MENU */
 
-.menu_tbl tr:nth-of-type(even) {
+.menu-table tr:nth-of-type(even) {
     background-color: #d1b38e;
 }
 
-.menu_tbl tr:first-of-type {
+.menu-table tr:first-of-type {
     background-color: #d1b38e;
 }
 
@@ -195,8 +195,9 @@ textarea {
     height: 80px;
 }
 
-.qty_price {
-    width: 30px;
+.menu-table .qty_price {
+    width: 50px;
+    padding-left: 5px;
 }
 
 #total_price_lbl {
