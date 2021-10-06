@@ -1,30 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>JavaJam Coffee House</title>
-    <meta charset=“utf-8”>
-    <link rel="stylesheet" href="javajam.css">
+    <meta charset="“utf-8”" />
+    <link rel="stylesheet" href="javajam.css" />
 </head>
 
 <body>
     <div id="page-wrapper">
-
-        <header>
-        </header>
+        <header></header>
 
         <div id="left-column">
             <nav>
                 <ul>
                     <b>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="music.html">Music</a></li>
-						<li><a href="jobs.html">Jobs</a></li>
-					</b>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.php">Menu</a></li>
+              <li><a href="music.html">Music</a></li>
+              <li><a href="jobs.html">Jobs</a></li>
+            </b>
                 </ul>
             </nav>
-
         </div>
 
         <div id="right-column">
@@ -42,81 +39,122 @@
                         </tr>
                         <tr class="j_java_row">
                             <td class="label">Just Java</td>
-                            <td>Regular house blend, decaffeinated coffee, or flavor of the day.<br>
+                            <td>
+                                Regular house blend, decaffeinated coffee, or flavor of the day.
+                                <br />
                                 <form id="j_javas" name="j_javas">
                                     <strong>
-                                        <label><input type="radio" name="j_java" id="j_java" value="2">Endless Cup $2.00</label>
-                                    </strong>
+                      <label
+                        ><input
+                          type="radio"
+                          name="j_java"
+                          id="j_java"
+                          value="2"
+                        />Endless Cup $2.00</label
+                      >
+                    </strong>
                                 </form>
-
                             </td>
                             <td>
-                                <input type="text" class="qty_price" id="qty_java" name="qty_java">
+                                <input type="text" class="qty_price" id="qty_java" name="qty_java" />
                             </td>
                             <td>
-                                <input type="text" class="qty_price" id="price_java" name="price_java" readonly onchange="updateTotalPrice()">
+                                <input type="text" class="qty_price" id="price_java" name="price_java" readonly onchange="updateTotalPrice()" />
                             </td>
                         </tr>
                         <tr class="ca_lait_row">
                             <td class="label">Cafe au Lait</td>
-                            <td>House blended coffee infused into a smooth, steamed milk.<br>
+                            <td>
+                                House blended coffee infused into a smooth, steamed milk.<br />
                                 <form id="ca_laits" name="ca_laits">
                                     <strong>
-                                        <label><input type="radio" name="ca_lait" id="single_lait" value="2" class="qty_price">Single $2.00</label>
-                                        <label><input type="radio" name="ca_lait" id="double_lait" value="3" class="qty_price">Double $3.00</label>
-                                    </strong>
+                      <label
+                        ><input
+                          type="radio"
+                          name="ca_lait"
+                          id="single_lait"
+                          value="2"
+                          class="qty_price"
+                        />Single $2.00</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="ca_lait"
+                          id="double_lait"
+                          value="3"
+                          class="qty_price"
+                        />Double $3.00</label
+                      >
+                    </strong>
                                 </form>
                                 <span id="result"></span>
                             </td>
                             <td>
                                 <!-- oninput="calcPrice('ca_lait', 'qty_lait', 'price_lait')" -->
-                                <input type="text" class="qty_price" id="qty_lait" name="qty_lait">
+                                <input type="text" class="qty_price" id="qty_lait" name="qty_lait" />
                             </td>
                             <td>
-                                <input type="text" class="qty_price" id="price_lait" name="price_lait" readonly onchange="updateTotalPrice()">
+                                <input type="text" class="qty_price" id="price_lait" name="price_lait" readonly onchange="updateTotalPrice()" />
                             </td>
                         </tr>
                         <tr class="i_cap_row">
                             <td class="label">Iced Cappuccino</td>
-                            <td>Sweetened espresso blended with icy-cold milk and served in a chilled glass.<br>
+                            <td>
+                                Sweetened espresso blended with icy-cold milk and served in a chilled glass.<br />
                                 <form id="i_caps" name="i_caps">
                                     <strong>
-                                        <label><input type="radio" name="i_cap" id="single_cap" value="4.75">Single $4.75</label>
-                                        <label><input type="radio" name="i_cap" id="double_cap" value="5.75">Double $5.75</label>
-                                    </strong>
-                                    <span id='result2'></span>
+                      <label
+                        ><input
+                          type="radio"
+                          name="i_cap"
+                          id="single_cap"
+                          value="4.75"
+                        />Single $4.75</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="i_cap"
+                          id="double_cap"
+                          value="5.75"
+                        />Double $5.75</label
+                      >
+                    </strong>
+                                    <span id="result2"></span>
                                 </form>
                             </td>
                             <td>
-                                <input type="text" class="qty_price" id="qty_cap" name="qty_cap">
+                                <input type="text" class="qty_price" id="qty_cap" name="qty_cap" />
                             </td>
                             <td>
-                                <input type="text" class="qty_price" id="price_cap" name="price_cap" readonly onchange="updateTotalPrice()">
+                                <input type="text" class="qty_price" id="price_cap" name="price_cap" readonly onchange="updateTotalPrice()" />
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td id="total_price_lbl"><strong>Total Price</strong></td>
                             <td colspan="2">
-                                <input type="text" class="qty_price" id="total_price" name="total_price" readonly>
+                                <input type="text" class="qty_price" id="total_price" name="total_price" readonly />
                             </td>
                         </tr>
                     </table>
                 </div>
-                <br>
-                <br>
-                <br>
+                <br />
+                <br />
+                <br />
             </div>
         </div>
 
         <footer>
-            <small><i>Copyright &copy; 2014 JavaJam Coffee House<br>
-					<a href="mailto:yuhan@liu.com">yuhan@liu.com</a>
-				</i></small>
-        </footer>
+            <small><i
+            >Copyright &copy; 2014 JavaJam Coffee House<br />
+            <a href="mailto:yuhan@liu.com">yuhan@liu.com</a>
+          </i></small
+        >
+      </footer>
     </div>
 
     <script type="text/javascript" src="js/menu.js"></script>
-</body>
-
+  </body>
 </html>
