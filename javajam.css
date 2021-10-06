@@ -207,3 +207,20 @@ textarea {
 #total_price {
     width: 90px;
 }
+
+/*-----------------------Daily sales report-------------------*/
+
+.report-table-text{
+    margin: 0px;
+}
+
+.report-checkbox{
+    background-color: #e2d1b2;
+    border: solid #2d0202 2px;
+    width: 30px;
+    height: 30px;
+}
+
+.report-checkbox:hover{
+    cursor: pointer;
+}
