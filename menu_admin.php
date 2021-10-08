@@ -72,13 +72,13 @@
                   <br />
                   <div id="j_javas">
                     <strong>
-                      <label><input type="radio" name="j_java" id="j_java" data-price=<?= $row_j_java["price"] ?> value="1" />Endless Cup $<?= $row_j_java["price"] ?></label>
+                      <label><input type="checkbox" name="j_java" id="j_java" data-price=<?= $row_j_java["price"] ?> value="1" />Endless Cup $<?= $row_j_java["price"] ?></label>
                     </strong>
                   </div>
                 </td>
                 <td>
-                  Endless Cup
-                  <input type="text" class="qty_price" id="new_java" name="new_java" />
+                  Endless
+                  <input type="text" class="qty_price" id="new_java" name="new_java" readonly/>
                 </td>
               </tr>
               <tr class="ca_lait_row">
@@ -89,17 +89,17 @@
                   House blended coffee infused into a smooth, steamed milk.<br />
                   <div id="ca_laits">
                     <strong>
-                      <label><input type="radio" name="ca_lait" id="single_lait" data-price=<?= $row_single_lait["price"] ?> value="2" class="qty_price" />Single $<?= $row_single_lait["price"] ?></label>
-                      <label><input type="radio" name="ca_lait" id="double_lait" data-price=<?= $row_double_lait["price"] ?> value="3" class="qty_price" />Double $<?= $row_double_lait["price"] ?></label>
+                      <label><input type="checkbox" name="ca_lait" id="single_lait" data-price=<?= $row_single_lait["price"] ?> value="2" class="qty_price" />Single $<?= $row_single_lait["price"] ?></label>
+                      <label><input type="checkbox" name="ca_lait" id="double_lait" data-price=<?= $row_double_lait["price"] ?> value="3" class="qty_price" />Double $<?= $row_double_lait["price"] ?></label>
                     </strong>
                   </div>
                   <span id="result"></span>
                 </td>
                 <td>
                   Single
-                  <input type="text" class="qty_price" id="new_single_lait" name="new_single_lait" />
+                  <input type="text" class="qty_price" id="new_single_lait" name="new_single_lait" readonly/>
                   Double
-                  <input type="text" class="qty_price" id="new_double_lait" name="new_double_lait" />
+                  <input type="text" class="qty_price" id="new_double_lait" name="new_double_lait" readonly/>
                 </td>
               </tr>
               <tr class="i_cap_row">
@@ -111,17 +111,17 @@
                   chilled glass.<br />
                   <div id="i_caps">
                     <strong>
-                      <label><input type="radio" name="i_cap" id="single_cap" data-price=<?= $row_single_cap["price"] ?> value="4" />Single $<?= $row_single_cap["price"] ?></label>
-                      <label><input type="radio" name="i_cap" id="double_cap" data-price=<?= $row_double_cap["price"] ?> value="5" />Double $<?= $row_double_cap["price"] ?></label>
+                      <label><input type="checkbox" name="i_cap" id="single_cap" data-price=<?= $row_single_cap["price"] ?> value="4" />Single $<?= $row_single_cap["price"] ?></label>
+                      <label><input type="checkbox" name="i_cap" id="double_cap" data-price=<?= $row_double_cap["price"] ?> value="5" />Double $<?= $row_double_cap["price"] ?></label>
                     </strong>
                     <span id="result2"></span>
                   </div>
                 </td>
                 <td>
                   Single
-                  <input type="text" class="qty_price" id="new_single_lait" name="new_single_cap" />
+                  <input type="text" class="qty_price" id="new_single_cap" name="new_single_cap" readonly/>
                   Double
-                  <input type="text" class="qty_price" id="new_double_lait" name="new_double_cap" />
+                  <input type="text" class="qty_price" id="new_double_cap" name="new_double_cap" readonly/>
                 </td>
               </tr>
               <tr>
@@ -148,7 +148,7 @@
     </footer>
   </div>
 
-  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/menu_admin.js"></script>
 </body>
 
 </html>
