@@ -35,7 +35,7 @@
         exit;
     }
 
-    $query = "insert into orders (order_date) values ('" . $currentdate . "')";
+    $query = "insert into orders values (null)";
     $result = $db->query($query);
 
     if ($result) {
