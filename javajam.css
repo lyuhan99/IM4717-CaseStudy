@@ -208,6 +208,19 @@ textarea {
     width: 90px;
 }
 
+.menu-submit{
+    background-color: #d1b38e; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 16px;
+    margin-left: 550px;
+}
+
+.menu-submit:hover{
+    cursor: pointer;
+}
+
 
 /*-----------------------Daily sales report-------------------*/
 
@@ -260,4 +273,8 @@ textarea {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer; */
+}
+
+#button-submit:hover{
+    cursor: pointer;
 }

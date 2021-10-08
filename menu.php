@@ -134,7 +134,7 @@
               </tr>
             </table>
           </div>
-          <input type="submit" name="submit" value="Submit">
+          <input type="submit" class="menu-submit" name="submit" value="Submit Order">
         </form>
         <br />
         <br />
