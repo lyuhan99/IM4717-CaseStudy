@@ -128,13 +128,16 @@
               <tr>
                 <td></td>
                 <td id="total_price_lbl"><strong>Total Price</strong></td>
-                <td colspan="2">
+                <td colspan="1">
                   <input type="text" class="qty_price" id="total_price" name="total_price" readonly />
+                </td>
+                <td>
+                  <input type="submit" id="button-submit" name="submit" value="Submit Order">
                 </td>
               </tr>
             </table>
           </div>
-          <input type="submit" class="menu-submit" name="submit" value="Submit Order">
+          <!-- <input type="submit" class="menu-submit" name="submit" value="Submit Order"> -->
         </form>
         <br />
         <br />

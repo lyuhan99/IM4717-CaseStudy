@@ -202,22 +202,23 @@ textarea {
 
 #total_price_lbl {
     float: right;
+    margin-top: 9px;
 }
 
 #total_price {
     width: 90px;
 }
 
-.menu-submit{
-    background-color: #d1b38e; 
-    border: none; 
-    border-radius: 5px; 
-    padding: 10px; 
+.menu-submit {
+    background-color: #d1b38e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 16px;
     margin-left: 550px;
 }
 
-.menu-submit:hover{
+.menu-submit:hover {
     cursor: pointer;
 }
 
@@ -239,10 +240,9 @@ textarea {
     cursor: pointer;
 }
 
-.total-sales-container{
+.total-sales-container {
     margin-left: 425px;
 }
-
 
 .sales-table tr:nth-of-type(even) {
     background-color: #d1b38e;
@@ -263,18 +263,18 @@ textarea {
 }
 
 #button-submit {
-    background-color: #e2d1b2;
+    background-color: #d1b38e;
     border: none;
-    color: white;
-    /* padding: 15px 32px;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer; */
-}
-
-#button-submit:hover{
     cursor: pointer;
 }
+
+
+/* 
+#button-submit:hover{
+    cursor: pointer;
+} */

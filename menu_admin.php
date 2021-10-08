@@ -178,7 +178,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <input id="button-submit" type="submit" name="submit_changes" value="Submit Changes" style="background-color: #d1b38e; border: none; border-radius: 5px; padding: 10px; font-size: 16px">
+                  <input id="button-submit" type="submit" name="submit_changes" value="Submit Changes">
                 </td>
               </tr>
             </table>
