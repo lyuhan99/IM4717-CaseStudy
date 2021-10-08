@@ -27,10 +27,18 @@
 
     for ($i = 0; $i < $product_result->num_rows; $i++) {
         $product_row = $product_result->fetch_assoc();
-        array_push($product_id_arr, $product_row["productid"]);
-        $product_name_arr[$product_row["productid"]] = $product_row["name"];
         $product_category_arr[$product_row["productid"]] = $product_row["category"];
         $product_price_arr[$product_row["productid"]] = $product_row["price"];
+    }
+
+
+    //get all product categories from the database and put them in an arry (category_arr)
+    $category_arr = array();
+    $category_query = "SELECT DISTINCT category FROM products";
+    $category_result = $db->query($category_query);
+    for ($i = 0; $i < $category_result->num_rows; $i++) {
+        $category_row = $category_result->fetch_assoc();
+        array_push($category_arr, $category_row["category"]);
     }
 
     //get all dates where there were orders placed
@@ -48,25 +56,37 @@
 
     //get date selected
     $searchdate = $_POST['searchdate'];
-    if ($searchdate){
+    if ($searchdate) {
         $currentdate = $searchdate;
     } else {
         $currentdate = date("Y-m-d"); //today's date is displayed by default
     }
 
-    $product_qty_arr = array();
-    //get the total quantity sold for each product as an array in the form of (product_id => quantity, etc.)
-    foreach ($product_id_arr as $product_id) {
-        $query = "SELECT qty FROM order_items WHERE order_date='$currentdate' and productid=$product_id";
-        $result = $db->query($query);
-        $total_qty = 0;
-        if ($result) {
-            for ($i = 0; $i < $result->num_rows; $i++) {
-                $qty_row = $result->fetch_assoc();
-                $total_qty += $qty_row["qty"];
+    $category_qty_arr = array(); //qty of sales in that category by key value pair (category => qty)
+    $category_sales_arr = array(); //total price of sales in that category by key value pair (categoyr => price)
+
+    //initialize all values to 0 (if there are no orders in that category at all)
+    foreach ($category_arr as $category) {
+        $category_qty_arr[$category] = 0;
+        $category_sales_arr[$category] = 0;
+    }
+
+    //get all orders made today
+    $query = "SELECT * FROM order_items WHERE order_date='$currentdate'";
+    $result = $db->query($query);
+    if ($result) {
+        for ($i = 0; $i < $result->num_rows; $i++) {
+            $row = $result->fetch_assoc();
+            $product_id = $row["productid"];
+            //loop through the category array and check which one the product's category matches
+            foreach ($category_arr as $category) {
+                if ($product_category_arr[$product_id] == $category) {
+                    $category_qty_arr[$category] += $row["qty"]; //if it matches, add the qty of the product to the qty of that matching category
+                    $category_sales_arr[$category] += ($row["qty"] * $product_price_arr[$product_id]);
+                    break;
+                }
             }
         }
-        $product_qty_arr[$product_id] = $total_qty;
     }
 
     ?>
@@ -92,10 +112,10 @@
         <div id="right-column">
             <div class="content">
                 <div class="content-header">
-                    <h2>Total dollar sales by product on <?php echo $currentdate ?></h2>
+                    <h2>Sales quantities by product categories on <?php echo date("Y-m-d") ?></h2>
                 </div>
                 <div class="change-date-container">
-                    <form action="daily-sales.php" method="post">
+                    <form action="category-sales.php" method="post">
                         <strong>View report for a different date:</strong>
                         <select name="searchdate">
                             <option disabled selected>Select</option>
@@ -110,33 +130,50 @@
                 </div>
                 <br>
                 <div>
-                    <table border="0" class="sales-table">
+                    <table border="0" class="category-table">
                         <tr>
-                            <td><strong>Product Name</strong></td>
+                            <td><strong>Category</strong></td>
                             <td><strong>Quantity Sold</strong></td>
                             <td><strong>Total Dollar Sales ($)</strong></td>
                         </tr>
                         <?php
                         $total_sales = 0;
-                        foreach ($product_id_arr as $product_id) {
-                            $product_total_sales = $product_price_arr[$product_id] * $product_qty_arr[$product_id];
-                            $product_total_sales_format = number_format((float)$product_total_sales, 2, '.', '');
+                        foreach ($category_arr as $category) {
+                            $category_sales = $category_sales_arr[$category];
+                            $category_sales_format = number_format((float)$category_sales, 2, '.', '');
                             echo "<tr>";
-                            echo "<td>$product_name_arr[$product_id] - $product_category_arr[$product_id] </td>";
-                            echo "<td>$product_qty_arr[$product_id]</td>";
-                            echo "<td>$product_total_sales_format</td>";
+                            echo "<td>$category</td>";
+                            echo "<td>$category_qty_arr[$category]</td>";
+                            echo "<td>$category_sales_format</td>";
                             echo "</tr>";
-                            $total_sales += $product_total_sales;
-                            $total_sales_format = number_format((float)$total_sales, 2, '.', '');
+                        }
+                        //check if there are any sales at all
+                        $no_sales = true;
+                        if ($result->num_rows > 0) {
+                            $no_sales = false;
+                            //get the category or categories with the highest dollar sales
+                            $highest_category = array_keys($category_sales_arr, max($category_sales_arr));
                         }
                         ?>
                     </table>
                     <br>
-                    <div class="total-sales-container">
-                        <strong>Total Sales: </strong> <?php echo "$" . $total_sales_format . ""; ?>
+                    <div class="highest-sales-container">
+                        Highest dollar sale category:
+                        <strong>
+                            <?php
+                            if ($no_sales) {
+                                echo "Null - There are no sales yet today.";
+                            } else {
+                                foreach ($highest_category as $category) { //if there is more than one category with the same dollar sales
+                                    echo $category;
+                                    if ($category != end($highest_category)) {
+                                        echo ", ";
+                                    }
+                                }
+                            }
+                            ?>
+                        </strong>
                     </div>
-                    <br>
-
                 </div>
                 <br>
                 <br>
