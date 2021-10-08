@@ -41,7 +41,7 @@
           <b>
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.php">Menu</a></li>
-            <li><a href="menu_admin.php">Admin</a></li>
+            <li><a href="menu_admin.php">> Admin</a></li>
             <li><a href="music.html">Music</a></li>
             <li><a href="jobs.html">Jobs</a></li>
           </b>
