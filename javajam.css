@@ -226,6 +226,29 @@ textarea {
     cursor: pointer;
 }
 
+.total-sales-container{
+    margin-left: 425px;
+}
+
+
+.sales-table tr:nth-of-type(even) {
+    background-color: #d1b38e;
+}
+
+.sales-table tr:first-of-type {
+    background-color: #2d0202;
+    color: white;
+}
+
+.category-table tr:nth-of-type(even) {
+    background-color: #d1b38e;
+}
+
+.category-table tr:first-of-type {
+    background-color: #2d0202;
+    color: white;
+}
+
 #button-submit {
     background-color: #e2d1b2;
     border: none;

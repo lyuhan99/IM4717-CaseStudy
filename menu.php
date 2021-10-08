@@ -44,6 +44,7 @@
             <li><a href="menu_admin.php">> Admin</a></li>
             <li><a href="music.html">Music</a></li>
             <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="daily-sales-report.html">Report</a></li>
           </b>
         </ul>
       </nav>
