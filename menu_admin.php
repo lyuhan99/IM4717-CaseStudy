@@ -32,7 +32,6 @@
   $row_double_lait = $res_double_lait->fetch_assoc();
   $row_single_cap = $res_single_cap->fetch_assoc();
   $row_double_cap = $res_double_cap->fetch_assoc();
-  // }
 
 
   if ($_SERVER['REQUEST_METHOD'] == 'POST' and $_REQUEST['submit_changes'] == 'Submit Changes') {
@@ -178,7 +177,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <input type="submit" name="submit_changes" value="Submit Changes">
+                  <input id="button-submit" type="submit" name="submit_changes" value="Submit Changes" style="background-color: #d1b38e; border: none; border-radius: 5px; padding: 10px; font-size: 16px">
                 </td>
               </tr>
             </table>

@@ -88,8 +88,9 @@
                   House blended coffee infused into a smooth, steamed milk.<br />
                   <div id="ca_laits">
                     <strong>
-                      <label><input type="radio" name="ca_lait" id="single_lait" data-price=<?= $row_single_lait["price"] ?> value="2" class="qty_price" />Single $<?= $row_single_lait["price"] ?></label>
-                      <label><input type="radio" name="ca_lait" id="double_lait" data-price=<?= $row_double_lait["price"] ?> value="3" class="qty_price" />Double $<?= $row_double_lait["price"] ?></label>
+                      <label><input type="radio" name="ca_lait" id="single_lait" data-price=<?= $row_single_lait["price"] ?> value="2" />Single $<?= $row_single_lait["price"] ?></label>
+                      <br>
+                      <label><input type="radio" name="ca_lait" id="double_lait" data-price=<?= $row_double_lait["price"] ?> value="3" />Double $<?= $row_double_lait["price"] ?></label>
                     </strong>
                   </div>
                   <span id="result"></span>
@@ -110,6 +111,7 @@
                   <div id="i_caps">
                     <strong>
                       <label><input type="radio" name="i_cap" id="single_cap" data-price=<?= $row_single_cap["price"] ?> value="4" />Single $<?= $row_single_cap["price"] ?></label>
+                      <br>
                       <label><input type="radio" name="i_cap" id="double_cap" data-price=<?= $row_double_cap["price"] ?> value="5" />Double $<?= $row_double_cap["price"] ?></label>
                     </strong>
                     <span id="result2"></span>

@@ -208,19 +208,33 @@ textarea {
     width: 90px;
 }
 
+
 /*-----------------------Daily sales report-------------------*/
 
-.report-table-text{
+.report-table-text {
     margin: 0px;
 }
 
-.report-checkbox{
+.report-checkbox {
     background-color: #e2d1b2;
     border: solid #2d0202 2px;
     width: 30px;
     height: 30px;
 }
 
-.report-checkbox:hover{
+.report-checkbox:hover {
     cursor: pointer;
+}
+
+#button-submit {
+    background-color: #e2d1b2;
+    border: none;
+    color: white;
+    /* padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; */
 }
