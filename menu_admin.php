@@ -58,12 +58,13 @@
           <div class="menu-table">
             <table border="0">
               <tr>
+                <!-- <th>Options</th> -->
                 <th>Coffee Name</th>
                 <th>Description</th>
-                <th>Qty</th>
-                <th>$</th>
+                <th>Price Update</th>
               </tr>
               <tr class="j_java_row">
+                <!-- <td><input type="checkbox" name="sel_j_java" id="sel_j_java"> </td> -->
                 <td class="label">Just Java</td>
                 <td>
                   Regular house blend, decaffeinated coffee, or flavor of the
@@ -76,13 +77,13 @@
                   </div>
                 </td>
                 <td>
-                  <input type="text" class="qty_price" id="qty_java" name="qty_java" />
-                </td>
-                <td>
-                  <input type="text" class="qty_price" id="price_java" name="price_java" readonly onchange="updateTotalPrice()" />
+                  Endless Cup
+                  <input type="text" class="qty_price" id="new_java" name="new_java" />
                 </td>
               </tr>
               <tr class="ca_lait_row">
+              <!-- <td><input type="checkbox" name="sel_ca_lait" id="sel_ca_lait"> </td> -->
+
                 <td class="label">Cafe au Lait</td>
                 <td>
                   House blended coffee infused into a smooth, steamed milk.<br />
@@ -95,14 +96,15 @@
                   <span id="result"></span>
                 </td>
                 <td>
-                  <!-- oninput="calcPrice('ca_lait', 'qty_lait', 'price_lait')" -->
-                  <input type="text" class="qty_price" id="qty_lait" name="qty_lait" />
-                </td>
-                <td>
-                  <input type="text" class="qty_price" id="price_lait" name="price_lait" readonly onchange="updateTotalPrice()" />
+                  Single
+                  <input type="text" class="qty_price" id="new_single_lait" name="new_single_lait" />
+                  Double
+                  <input type="text" class="qty_price" id="new_double_lait" name="new_double_lait" />
                 </td>
               </tr>
               <tr class="i_cap_row">
+              <!-- <td><input type="checkbox" name="sel_i_cap" id="sel_i_cap"> </td> -->
+
                 <td class="label">Iced Cappuccino</td>
                 <td>
                   Sweetened espresso blended with icy-cold milk and served in a
@@ -116,22 +118,22 @@
                   </div>
                 </td>
                 <td>
-                  <input type="text" class="qty_price" id="qty_cap" name="qty_cap" />
-                </td>
-                <td>
-                  <input type="text" class="qty_price" id="price_cap" name="price_cap" readonly onchange="updateTotalPrice()" />
+                  Single
+                  <input type="text" class="qty_price" id="new_single_lait" name="new_single_cap" />
+                  Double
+                  <input type="text" class="qty_price" id="new_double_lait" name="new_double_cap" />
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <td id="total_price_lbl"><strong>Total Price</strong></td>
-                <td colspan="2">
-                  <input type="text" class="qty_price" id="total_price" name="total_price" readonly />
+                <td></td>
+                <td>
+                  <input type="submit" name="submit" value="Submit Changes">
                 </td>
               </tr>
             </table>
           </div>
-          <input type="submit" name="submit" value="Submit">
+          
         </form>
         <br />
         <br />
